@@ -3,9 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/checkout.css">
     <title>checkout</title>
 </head>
 <body>
+    <div>
+        <img class="logo" src="images/booknest_logo.png" alt="logo">
+    </div>
+
+    <h1 class="heading">My Cart</h1>
+    <div class="checkout-products-grid">
+        <div class="checkout-product-grid">
+            <div class="delivery-date">
+                <p>Delivery date: Monday, December 9</p>
+            </div>
+            <div class="checkout-details-grid">
+                <div>
+                    <img src="products/book1.jpg" alt="book">
+                </div>
     
+                <div>
+                    <p class="product-name">Karvalo</p>
+                    <div class="price-grid">
+                        <p class="price1">&#8377; 110</p>
+                        <p class="price2">&#8377; 129</p>
+                    </div>
+                    <div class="checkout-changes-grid">
+                        <p class="quantity">Quantity: 1</p>
+                        <p class="checkout-changes">Update</p>
+                        <p class="checkout-changes">Delete</p>
+                    </div>
+                </div>
+    
+                <div>
+                    <div>
+                        <p class="delivery-options">Choose a delivery option:</p>
+                    </div>
+                    <div class="options-grid">
+                        <div class="option-grid">
+                            <div>
+                                <input type="radio" name="shipping" id="shipping">
+                            </div>
+                            <div>
+                                <label class="date-options" for="shipping">Monday, December 9</label>
+                                <p class="shipping-options">Free Shipping</p>
+                            </div>
+                        </div>
+                        <div class="option-grid">
+                            <div>
+                                <input type="radio" name="shipping" id="shipping">
+                            </div>
+                            <div>
+                                <label class="date-options" for="shipping">Tuesday, December 3</label>
+                                <p class="shipping-options">&#8377;25-Shipping</p>
+                            </div>
+                        </div>
+                        <div class="option-grid">
+                            <div>
+                                <input type="radio" name="shipping" id="shipping">
+                            </div>
+                            <div>
+                                <label class="date-options" for="shipping">Friday, November 29</label>
+                                <p class="shipping-options">&#8377;50-Shipping</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+        <div class="checkout-product-grid">
+            <div class="delivery-date">
+                <p>Delivery date: Monday, December 9</p>
+            </div>
+            <div class="checkout-details-grid">
+                <div>
+                    <img src="products/book1.jpg" alt="book">
+                </div>
+    
+                <div>
+                    <p class="product-name">Karvalo</p>
+                    <div class="price-grid">
+                        <p class="price1">&#8377; 110</p>
+                        <p class="price2">&#8377; 129</p>
+                    </div>
+                    <div class="checkout-changes-grid">
+                        <p class="quantity">Quantity: 1</p>
+                        <p class="checkout-changes">Update</p>
+                        <p class="checkout-changes">Delete</p>
+                    </div>
+                </div>
+    
+                <div>
+                    <div>
+                        <p class="delivery-options">Choose a delivery option:</p>
+                    </div>
+                    <div class="options-grid">
+                        <div class="option-grid">
+                            <div>
+                                <input type="radio" name="shipping" id="shipping">
+                            </div>
+                            <div>
+                                <label class="date-options" for="shipping">Monday, December 9</label>
+                                <p class="shipping-options">Free Shipping</p>
+                            </div>
+                        </div>
+                        <div class="option-grid">
+                            <div>
+                                <input type="radio" name="shipping" id="shipping">
+                            </div>
+                            <div>
+                                <label class="date-options" for="shipping">Tuesday, December 3</label>
+                                <p class="shipping-options">&#8377;25-Shipping</p>
+                            </div>
+                        </div>
+                        <div class="option-grid">
+                            <div>
+                                <input type="radio" name="shipping" id="shipping">
+                            </div>
+                            <div>
+                                <label class="date-options" for="shipping">Friday, November 29</label>
+                                <p class="shipping-options">&#8377;50-Shipping</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="order-summary-container">
+        <p class="order-summary">Order Summary</p>
+        <div class="order-calculations-grid">
+            <p>MRP(1 item)</p>
+            <p>&#8377; 129</p>
+        </div>
+        <div class="order-calculations-grid">
+            <p>Discounted Price</p>
+            <p>&#8377; 110</p>
+        </div>
+        <div class="order-calculations-grid">
+            <p>Shipping charges</p>
+            <p>&#8377; 25</p>
+        </div>
+        <div class="order-calculations-grid">
+            <p>Estimated tax(5%)</p>
+            <p>&#8377; 6.75</p>
+        </div>
+        <div class="order-calculations-grid">
+            <p class="total">Order total:</p>
+            <p class="total">&#8377; 141.75</p>
+        </div>
+        <button class="order-button">Place your order</button>
+    </div>
 </body>
 </html>

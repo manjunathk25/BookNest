@@ -1,0 +1,138 @@
+.logo{
+    height: 50px;
+}
+
+
+.heading{
+    margin-left: 150px;
+}
+
+.checkout-products-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    margin-left: 150px;
+}
+
+.checkout-product-grid{
+    display: grid;
+    width: 700px;
+    border: 1px solid rgb(213, 212, 212);
+    padding: 20px;
+}
+
+.delivery-date{
+    color: rgb(1, 93, 1);
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.checkout-details-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    column-gap: 15px;
+}
+
+.product-name{
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.price-grid{
+    display: grid;
+    grid-template-columns: 50px 50px;
+    padding-bottom: 6px;
+}
+.price1{
+    font-weight: 700;
+    color: rgb(150, 3, 3);
+}
+.price2{
+    font-size: 14px;
+    color: rgb(83, 82, 82);
+    text-decoration: line-through;
+}
+
+.checkout-changes-grid{
+    display: grid;
+    grid-template-columns: 90px 50px 50px;
+    column-gap: 6px;
+}
+.quantity{
+    font-size: 18px;
+}
+.checkout-changes{
+    color: rgb(0, 119, 166);
+}
+.checkout-changes:hover{
+    cursor: pointer;
+    color: rgb(174, 6, 6);
+
+}
+
+.delivery-options{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.options-grid{
+    display: grid;
+    row-gap: 10px;
+}
+.option-grid{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    column-gap: 6px;
+}
+.date-options{
+    color: rgb(1, 93, 1);
+    font-size: 18px;
+}
+.shipping-options{
+    color: rgb(88, 86, 86);
+    font-size: 14px;
+}
+
+/*order summary*/
+.order-summary-grid{
+    display: grid;
+    width: 300px;
+    row-gap: 10px;
+}
+.order-summary{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.order-summary-container{
+    border: 1px solid rgb(215, 213, 213);
+    padding: 10px;
+    width: 300px;
+    position: absolute;
+    top: 142px;
+    right: 250px;
+}
+.order-calculations-grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 50px;
+    padding: 10px;
+}
+.total{
+    color: rgb(146, 0, 0);
+    font-size: 22px;
+}
+.order-button{
+    background-color:orange;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 80px;
+    border: 1px solid orange;
+    border-radius: 4px;
+    margin-top: 50px;
+}
