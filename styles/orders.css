@@ -1,0 +1,58 @@
+.order-details-grid{
+    display: grid;
+    row-gap: 30px;
+}
+
+.order-info-grid-1,
+.order-info-grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.variable{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+.value{
+    color: #08278c;
+}
+
+.order-info-grid-1{
+    background-color: rgb(215, 213, 213);
+    border: 1px solid rgb(81, 80, 80);
+}
+.order-info-grid-2{
+    border: 1px solid rgb(81, 80, 80);
+    align-items: center;
+    border-top: none;
+    margin-top: -2px;
+}
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+.author{
+    color: rgb(96, 94, 94);
+    padding-bottom: 8px;
+    font-size: 14px;
+}
+.arrival{
+    color: rgb(17, 226, 17);
+    padding-bottom: 8px;
+}
+.quantity{
+    padding-bottom: 8px;
+}
+.buy-button,
+.track-button{
+    color: whitesmoke;
+    background-color: rgb(250, 83, 22);
+    border: 1px solid rgb(250, 83, 22);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
