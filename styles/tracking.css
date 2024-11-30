@@ -1,0 +1,35 @@
+.heading,
+.orders-link{
+    margin: 8px 100px;
+}
+
+.tracking-grid{
+    display: grid;
+    grid-template-columns: 200px 400px;
+    padding: 20px;
+    margin: 20px 500px  20px 100px;
+    border: 1px solid grey;
+    column-gap: 80px;
+}
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+.author{
+    font-size: 14px;
+    color: grey;
+    font-style: italic;
+    padding-bottom: 6px;
+}
+.quantity{
+    padding-bottom: 60px;
+}
+
+.progress-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-weight: bold;
+    font-size: 20px;
+}
+
