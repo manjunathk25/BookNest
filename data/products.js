@@ -1,4 +1,5 @@
-const products = [{
+const products = [{ 
+    productId: "txn-1a2b-34cd-5678",
     image: "products/book1.jpg",
     name: "Karvalo",
     author: "KP Poornachandra Tejaswi",
@@ -12,6 +13,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-9x8w-zxy4-321v",
     image: "products/book2.jpg",
     name: "Parisaradha kathe",
     author: "KP Poornachandra Tejaswi",
@@ -25,6 +27,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-g11k-jjj3-344n",
     image: "products/book3.jpg",
     name: "Papillon vol(1)",
     author: "KP Poornachandra Tejaswi",
@@ -38,6 +41,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-s99a-88vv-7766",
     image: "products/book4.jpg",
     name: "Yaana",
     author: "SL Byrappa",
@@ -51,6 +55,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-55pq-qq77-88ww",
     image: "products/book5.jpg",
     name: "Wings of Fire",
     author: "APJ Abdul Kalam",
@@ -64,6 +69,7 @@ const products = [{
         discount_percentage: 14
     }
 }, {
+    productId: "txn-p99g-gh22-3323",
     image: "products/book6.jpg",
     name: "VamshaVruksha",
     author: "SL Byrappa",
@@ -77,6 +83,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-m44n-nn66-7788",
     image: "products/book7.jpg",
     name: "Malegalalli Madhumagalu",
     author: "Kuvempu",
@@ -90,6 +97,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-7zzx-xy99-oo00",
     image: "products/book8.jpg",
     name: "Jugari Cross",
     author: "KP Poornachandra Tejaswi",
@@ -103,6 +111,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-33hh-gg55-4433",
     image: "products/book9.jpg",
     name: "Nanna Devaru matthu itara kathegalu",
     author: "Kuvempu",
@@ -116,6 +125,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-22ll-mm99-8888",
     image: "products/book10.jpg",
     name: "Bhagavadgita Yatharoopa",
     author: "AC Bhaktivedanta Swami Prabhupada, Ls Seshagiri Rao ",
@@ -129,6 +139,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-w67w-ww11-0000",
     image: "products/book11.jpg",
     name: "Malenaadina Chitragalu",
     author: "Kuvempu",
@@ -142,6 +153,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-12xy-yx43-2132",
     image: "products/book12.jpg",
     name: "MaariKaadu",
     author: "Chandrashekara Kambaara",
@@ -155,6 +167,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-g34m-mn78-9099",
     image: "products/book13.jpg",
     name: "Naayi Neralu",
     author: "SL Byrappa ",
@@ -168,6 +181,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-s556-vv22-3322",
     image: "products/book14.jpg",
     name: "Praani Prapanchada Vismayagalu",
     author: "K Shivarama Karanth",
@@ -181,6 +195,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-88pp-lk55-0044",
     image: "products/book15.jpg",
     name: "Chidambara Rahasya",
     author: "KP Poornachandra Tejaswi",
@@ -194,6 +209,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-10gg-ff44-8833",
     image: "products/book16.jpg",
     name: "Bettada Jeeva",
     author: "K Shivarama Karanth",
@@ -207,6 +223,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-28mm-ww99-1123",
     image: "products/book17.jpg",
     name: "Sanyasi matthu itara kathegalu",
     author: "Kuvempu",
@@ -220,6 +237,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-667v-vg11-3345",
     image: "products/book18.jpg",
     name: "Abachurina Postoffice",
     author: "KP Poornachandra Tejaswi",
@@ -233,6 +251,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-992z-ll55-3322",
     image: "products/book19.jpg",
     name: "Mahapalayana millenium(14)",
     author: "KP Poornachandra Tejaswi",
@@ -246,6 +265,7 @@ const products = [{
         discount_percentage: 15
     }
 }, {
+    productId: "txn-22yg-gg88-5566",
     image: "products/book20.jpg",
     name: "Maigallana dinachari",
     author: "K Shivarama Karanth",
@@ -259,6 +279,7 @@ const products = [{
         discount_percentage: 10
     }
 }, {
+    productId: "txn-00ww-xx99-2233",
     image: "products/book21.jpg",
     name: "American Prometheus : The Triumph & Tragedy Of J Robert Oppenheimer",
     author: "Kai Bird",
