@@ -42,7 +42,7 @@ cart.forEach((cartItem) => {
                     <div class="options-grid">
                         <div class="option-grid">
                             <div>
-                                <input type="radio" name="shipping" id="shipping">
+                                <input type="radio" name="delivery-option-${matchingProduct.productId}">
                             </div>
                             <div>
                                 <label class="date-options" for="shipping">Monday, December 9</label>
@@ -51,7 +51,7 @@ cart.forEach((cartItem) => {
                         </div>
                         <div class="option-grid">
                             <div>
-                                <input type="radio" name="shipping" id="shipping">
+                                <input type="radio" name="delivery-option-${matchingProduct.productId}">
                             </div>
                             <div>
                                 <label class="date-options" for="shipping">Tuesday, December 3</label>
@@ -60,7 +60,7 @@ cart.forEach((cartItem) => {
                         </div>
                         <div class="option-grid">
                             <div>
-                                <input type="radio" name="shipping" id="shipping">
+                                <input type="radio" name="delivery-option-${matchingProduct.productId}">
                             </div>
                             <div>
                                 <label class="date-options" for="shipping">Friday, November 29</label>
