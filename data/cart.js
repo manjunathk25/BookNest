@@ -3,11 +3,13 @@ if(!cart){
     cart = [
         {
             productId: 'txn-9x8w-zxy4-321v',
-            quantity: 2
+            quantity: 2,
+            deliveryOptionId: '1'
         },
         {
             productId: 'txn-s99a-88vv-7766',
-            quantity: 1
+            quantity: 1,
+            deliveryOptionId: '2'
         }
     ];
 }
@@ -29,7 +31,8 @@ export function addToCart(productId){
         else{
             cart.push({
                 productId,
-                quantity: 1
+                quantity: 1,
+                deliveryOptionId: '1'
             })
         }
         saveToStorage()

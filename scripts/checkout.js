@@ -1,5 +1,7 @@
 import {cart, removeFromCart} from '../data/cart.js';
 import {products} from '../data/products.js';
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+import {deliveryOptions} from '../data/deliveryOptions.js';
 
 let myCartHTML = '';
 cart.forEach((cartItem) => {
@@ -12,10 +14,22 @@ cart.forEach((cartItem) => {
         }
     })
 
+    const deliveryOptionID = cartItem.deliveryOptionId;
+
+    let deliveryOption;
+    deliveryOptions.forEach((option) => {
+        if(option.id === deliveryOptionID){
+            deliveryOption = option;
+        }
+    })
+    const today = dayjs();
+    const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
+    const dateString = deliveryDate.format('dddd, MMMM D');
+
     myCartHTML += `
         <div class="checkout-product-grid js-checkout-product-${matchingProduct.productId}">
             <div class="delivery-date">
-                <p>Delivery date: Monday, December 9</p>
+                <p>Delivery date: ${dateString}</p>
             </div>
             <div class="checkout-details-grid">
                 <div>
@@ -40,33 +54,7 @@ cart.forEach((cartItem) => {
                         <p class="delivery-options">Choose a delivery option:</p>
                     </div>
                     <div class="options-grid">
-                        <div class="option-grid">
-                            <div>
-                                <input type="radio" name="delivery-option-${matchingProduct.productId}">
-                            </div>
-                            <div>
-                                <label class="date-options" for="shipping">Monday, December 9</label>
-                                <p class="shipping-options">Free Shipping</p>
-                            </div>
-                        </div>
-                        <div class="option-grid">
-                            <div>
-                                <input type="radio" name="delivery-option-${matchingProduct.productId}">
-                            </div>
-                            <div>
-                                <label class="date-options" for="shipping">Tuesday, December 3</label>
-                                <p class="shipping-options">&#8377;25-Shipping</p>
-                            </div>
-                        </div>
-                        <div class="option-grid">
-                            <div>
-                                <input type="radio" name="delivery-option-${matchingProduct.productId}">
-                            </div>
-                            <div>
-                                <label class="date-options" for="shipping">Friday, November 29</label>
-                                <p class="shipping-options">&#8377;50-Shipping</p>
-                            </div>
-                        </div>
+                        ${deliveryOptionsHTML(matchingProduct, cartItem)}
                     </div>
                  </div>
             </div>
@@ -74,6 +62,33 @@ cart.forEach((cartItem) => {
     </div>
     `;
 })
+
+function deliveryOptionsHTML(matchingProduct, cartItem){
+    let html = '';
+    deliveryOptions.forEach((deliveryOption) => {
+        const today = dayjs();
+        const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
+        const dateString = deliveryDate.format('dddd, MMMM D');
+        const priceString = deliveryOption.shippingPrice === 0 
+        ? 'FREE'
+        : `&#8377; ${deliveryOption.shippingPrice}`;
+        
+        const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
+        html +=
+            `
+                <div class="option-grid">
+                    <div>
+                        <input type="radio" ${isChecked ? 'checked' : ''} name="delivery-option-${matchingProduct.productId}">
+                    </div>
+                    <div>
+                        <label class="date-options" for="shipping">${dateString}</label>
+                        <p class="shipping-options">${priceString} - Shipping</p>
+                    </div>
+                </div>   
+            `;
+    });
+    return html;
+}
 
 document.querySelector('.js-checkout-products-grid').innerHTML = myCartHTML;
 
