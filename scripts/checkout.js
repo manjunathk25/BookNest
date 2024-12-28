@@ -1,4 +1,4 @@
-import {cart} from '../data/cart.js';
+import {cart, removeFromCart} from '../data/cart.js';
 import {products} from '../data/products.js';
 
 let myCartHTML = '';
@@ -13,7 +13,7 @@ cart.forEach((cartItem) => {
     })
 
     myCartHTML += `
-        <div class="checkout-product-grid">
+        <div class="checkout-product-grid js-checkout-product-${matchingProduct.productId}">
             <div class="delivery-date">
                 <p>Delivery date: Monday, December 9</p>
             </div>
@@ -31,7 +31,7 @@ cart.forEach((cartItem) => {
                     <div class="checkout-changes-grid">
                         <p class="quantity">Quantity: ${cartItem.quantity}</p>
                         <p class="checkout-changes">Update</p>
-                        <p class="checkout-changes">Delete</p>
+                        <p class="checkout-changes js-delete-link" data-product-id="${matchingProduct.productId}">Delete</p>
                     </div>
                 </div>
     
@@ -76,3 +76,12 @@ cart.forEach((cartItem) => {
 })
 
 document.querySelector('.js-checkout-products-grid').innerHTML = myCartHTML;
+
+document.querySelectorAll('.js-delete-link').forEach((link) => {
+    link.addEventListener('click', () => {
+        const productId = link.dataset.productId;
+        removeFromCart(productId);
+        const checkoutProductGrid = document.querySelector(`.js-checkout-product-${productId}`);
+        checkoutProductGrid.remove();
+    })
+})
