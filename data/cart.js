@@ -1,13 +1,20 @@
-export let cart = [
-    {
-        productId: 'txn-9x8w-zxy4-321v',
-        quantity: 2
-    },
-    {
-        productId: 'txn-s99a-88vv-7766',
-        quantity: 1
-    }
-];
+export let cart = JSON.parse(localStorage.getItem('cart'));
+if(!cart){
+    cart = [
+        {
+            productId: 'txn-9x8w-zxy4-321v',
+            quantity: 2
+        },
+        {
+            productId: 'txn-s99a-88vv-7766',
+            quantity: 1
+        }
+    ];
+}
+
+function saveToStorage(){
+    localStorage.setItem('cart', JSON.stringify(cart))
+}
 
 export function addToCart(productId){
     let matchingItem;
@@ -25,6 +32,7 @@ export function addToCart(productId){
                 quantity: 1
             })
         }
+        saveToStorage()
 }
 
 export function removeFromCart(productId){
@@ -35,4 +43,5 @@ export function removeFromCart(productId){
         }
     })
     cart = newCart;
+    saveToStorage()
 }
